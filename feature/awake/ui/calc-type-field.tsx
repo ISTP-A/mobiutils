@@ -10,8 +10,8 @@ import type { AwakeFormValues } from "../model/types";
 const OPTIONS = [
     { value: "NONE", label: "없음" },
     { value: "NORMAL", label: "기본" },
-    { value: "TRANS1", label: "1차초웙" },
-    { value: "TRANS2", label: "2차초웙" },
+    { value: "TRANS1", label: "1차초월" },
+    { value: "TRANS2", label: "2차초월" },
     { value: "ETC", label: "직접입력" },
 ] as const;
 
