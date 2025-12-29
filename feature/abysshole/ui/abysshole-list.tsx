@@ -29,7 +29,7 @@ export function AbyssHoleList({ times }: AbyssHoleListProps) {
     return (
         <div>
             <div>
-                <div className="text-center text-accent-foreground py-4">
+                <div className="text-center text-accent-foreground py-12">
                     <p className="font-semibold">계산방식</p>
                     <p className="text-sm text-muted-foreground">
                         마지막 어비스 구멍 출현일시로부터 35시간 15분 간격으로 계산되었습니다

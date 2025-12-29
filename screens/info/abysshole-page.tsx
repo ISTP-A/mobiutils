@@ -7,10 +7,6 @@ import { ko } from "date-fns/locale";
 
 const TZ = "Asia/Seoul";
 
-/**
- * "2025.12.29 15:13:00" -> "2025-12-29T15:13:00+09:00"
- * 서버(UTC)에서도 동일한 절대시간으로 해석되도록 강제합니다.
- */
 function kstDate(input: string) {
     const [datePart, timePart] = input.split(" ");
     const iso = `${datePart.replaceAll(".", "-")}T${timePart}+09:00`;
@@ -50,7 +46,7 @@ export function AbyssHolePage() {
             </LayoutHeader>
 
             <LayoutContent>
-                <div className="p-4 space-y-4 text-center">
+                <div className="p-4 space-y-4 text-center bg-blue-50">
                     <div className="flex flex-col">
                         <p>마지막 어비스 구멍 출현 시각</p>
                         <p>
