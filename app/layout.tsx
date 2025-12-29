@@ -3,6 +3,7 @@ import { pretendard } from "./fonts/fonts";
 import "./globals.css";
 import { GlobalLayout } from "@/shared/layout/layout";
 import { AppHeader } from "@/widget/app-header/app-header";
+import { AppFooter } from "@/widget/app-footer/app-footer";
 
 export const metadata: Metadata = {
   title: "모바일 마비노기 유틸",
@@ -22,6 +23,7 @@ export default function RootLayout({
         <GlobalLayout>
           <AppHeader />
           {children}
+          <AppFooter />
         </GlobalLayout>
       </body>
     </html>

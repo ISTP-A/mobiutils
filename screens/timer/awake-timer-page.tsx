@@ -28,7 +28,7 @@ type FormValues = z.infer<typeof schema>
 
 const guides = [
     "1. 전투 시작 시간을 분/초로 각각 입력해주세요.",
-    "2. 눈먼 예언자 착용 여부를 선택해주세요. (다음 각성 시간의 기준이 눈먼 예언자가 아니라면, 초 단위로 직접 입력해주세요.)",
+    `2. 눈먼 예언자 착용 여부를 선택해주세요. (다음 각성 시간의 기준이 눈먼 예언자가 아니라면, 초 단위로 직접 입력해주세요.)`,
     "3. 계산 버튼을 클릭하거나 Enter 키를 눌러주세요.",
 ]
 
@@ -74,7 +74,6 @@ export function AwakePage() {
                         <GuideAccordion id="awake_guide" title="사용법" guides={guides} />
                     </form>
                 </Form>
-                <hr />
                 {result && <AwakeResult result={result} />}
             </LayoutContent>
         </LayoutInner>
@@ -110,6 +109,7 @@ function AwakeResult({ result }: { result: FormValues }) {
 
     return (
         <Field>
+            <hr />
             <FieldLabel>결과</FieldLabel>
             <FieldContent className="flex flex-col gap-2">
                 {awakes.map((t, idx) => (
