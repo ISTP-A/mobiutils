@@ -4,10 +4,12 @@ import { ko } from "date-fns/locale"
 
 interface AbyssHoleListProps {
     times: Date[]
+    lastObserve: Date
 }
 
 export function AbyssHoleList({
-    times
+    times,
+    lastObserve
 }: AbyssHoleListProps) {
     return (
         <div>
@@ -20,7 +22,7 @@ export function AbyssHoleList({
             <ul className="space-y-2">
                 {times.map((d, idx) => (
                     <li key={idx} className="flex items-center gap-3">
-                        <AbyssHoleTime value={d} />
+                        <AbyssHoleTime value={d} lastObserve={lastObserve} />
                     </li>
                 ))}
             </ul>
@@ -46,7 +48,7 @@ function formatRemain(target: Date, now = new Date()) {
 
     return isPast ? `${text} 지남` : `${text} 남음`;
 }
-function AbyssHoleTime({ value }: { value: Date }) {
+function AbyssHoleTime({ value, lastObserve }: { value: Date, lastObserve: Date }) {
     const remainText = formatRemain(value);
     return (
         <div className="w-full flex max-sm:flex-col items-center justify-between gap-2 border rounded-md p-4 bg-accent text-accent-foreground">

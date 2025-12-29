@@ -20,11 +20,14 @@ export function AbyssHolePage() {
             <LayoutContent>
                 <div className="p-4 space-y-4 text-center">
                     <div className="flex flex-col">
-                        <p>마지막 어비스 구멍 등장 시각</p>
+                        <p>마지막 어비스 구멍 출현 시각</p>
                         <p><strong className="tabular-nums text-lg">{format(lastObserve, "yyyy년 MM월 dd일 HH시 mm분")}</strong></p>
                     </div>
                 </div>
-                <AbyssHoleList times={nextTimes} />
+                <AbyssHoleList
+                    times={nextTimes}
+                    lastObserve={lastObserve}
+                />
             </LayoutContent>
         </LayoutInner >
     )
