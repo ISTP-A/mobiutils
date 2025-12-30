@@ -10,7 +10,6 @@ export const metadata: Metadata = {
 
 export default async function AbyssHoleInfoPage() {
     const response = await axios.get(process.env.BASE_URL + '/api/info/abysshole')
-    const data = await response.data
-
+    const data = await response.data.data
     return <AbyssHolePage lastObserve={data.appearance_time} />
 }

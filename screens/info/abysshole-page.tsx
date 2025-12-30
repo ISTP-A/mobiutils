@@ -12,12 +12,15 @@ const TZ = "Asia/Seoul";
 //     const iso = `${datePart.replaceAll(".", "-")}T${timePart}+09:00`;
 //     return new Date(iso);
 // }
+
 function kstDate(input: string) {
     return new Date(input);
 }
 
 export function AbyssHolePage({ lastObserve }: { lastObserve: string }) {
-    const observeDate = kstDate("2025.12.29 15:13:00");
+    console.log(lastObserve)
+    const observeDate = kstDate(lastObserve);
+    console.log(observeDate)
     const lastUpdate = kstDate("2025.12.29 15:13:00");
 
     const stepMinutes = 35 * 60 + 15;
