@@ -7,19 +7,22 @@ import { ko } from "date-fns/locale";
 
 const TZ = "Asia/Seoul";
 
+// function kstDate(input: string) {
+//     const [datePart, timePart] = input.split(" ");
+//     const iso = `${datePart.replaceAll(".", "-")}T${timePart}+09:00`;
+//     return new Date(iso);
+// }
 function kstDate(input: string) {
-    const [datePart, timePart] = input.split(" ");
-    const iso = `${datePart.replaceAll(".", "-")}T${timePart}+09:00`;
-    return new Date(iso);
+    return new Date(input);
 }
 
-export function AbyssHolePage() {
-    const lastObserve = kstDate("2025.12.29 15:13:00");
+export function AbyssHolePage({ lastObserve }: { lastObserve: string }) {
+    const observeDate = kstDate("2025.12.29 15:13:00");
     const lastUpdate = kstDate("2025.12.29 15:13:00");
 
     const stepMinutes = 35 * 60 + 15;
     const nextTimes = Array.from({ length: 10 }, (_, i) =>
-        addMinutes(lastObserve, stepMinutes * (i + 1)).getTime()
+        addMinutes(observeDate, stepMinutes * (i + 1)).getTime()
     );
 
     const lastUpdateText = formatInTimeZone(
@@ -30,7 +33,7 @@ export function AbyssHolePage() {
     );
 
     const lastObserveText = formatInTimeZone(
-        lastObserve,
+        observeDate,
         TZ,
         "yyyy년 MM월 dd일 HH시 mm분",
         { locale: ko }
