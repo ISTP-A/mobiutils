@@ -9,12 +9,14 @@ import {
     SelectValue,
 } from "@/shared/ui/select";
 
-type Option = { value: string; label: string };
+export type SelectOption = { value: string; label: string };
+
+export const getSelectOptions = (label: string, value: string): SelectOption => ({ label: label, value: value })
 
 type Props<T extends FieldValues> = {
     name: Path<T>;
     placeholder?: string;
-    options: Option[];
+    options: SelectOption[];
     disabled?: boolean;
 };
 

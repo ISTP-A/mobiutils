@@ -30,10 +30,11 @@ function MenuNavigation() {
                 <LayoutInner className="py-6">
                     <MenuGroup groupName="정보">
                         <MenuItem href="/info/break">어비스 브레이크 정보</MenuItem>
-                        <MenuItem href="/info/abysshole">어비스로 뚫린 검은 구멍 예측 정보</MenuItem>
+                        {/* <MenuItem href="/info/abysshole">어비스로 뚫린 검은 구멍 예측 정보</MenuItem> */}
                     </MenuGroup>
                     <MenuGroup groupName="계산기">
                         <MenuItem href="/timer/awake">각성시간 계산기</MenuItem>
+                        <MenuItem href="/calc/prism">보석세공 계산기</MenuItem>
                     </MenuGroup>
                 </LayoutInner>
             </DrawerContent>
