@@ -18,9 +18,7 @@ function kstDate(input: string) {
 }
 
 export function AbyssHolePage({ lastObserve }: { lastObserve: string }) {
-    console.log(lastObserve)
     const observeDate = kstDate(lastObserve);
-    console.log(observeDate)
     const lastUpdate = kstDate("2025.12.29 15:13:00");
 
     const stepMinutes = 35 * 60 + 15;

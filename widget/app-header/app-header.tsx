@@ -30,6 +30,7 @@ function MenuNavigation() {
                 <LayoutInner className="py-6">
                     <MenuGroup groupName="정보">
                         <MenuItem href="/info/break">어비스 브레이크 정보</MenuItem>
+                        <MenuItem href="/info/prism">세공 정보</MenuItem>
                         {/* <MenuItem href="/info/abysshole">어비스로 뚫린 검은 구멍 예측 정보</MenuItem> */}
                     </MenuGroup>
                     <MenuGroup groupName="계산기">

@@ -4,7 +4,6 @@ import { PrismResult } from "@/feature/prism/model/prism.types";
 import { PrismInfoBoard } from "@/feature/prism/ui/prism-info-board";
 import { PrismListForm } from "@/feature/prism/ui/prism-list-form";
 import { LayoutContent, LayoutHeader, LayoutInner } from "@/shared/layout/layout";
-import { Button } from "@/shared/ui/button";
 import { HeaderDescription, HeaderTitle } from "@/shared/ui/typography";
 import { useState } from "react";
 

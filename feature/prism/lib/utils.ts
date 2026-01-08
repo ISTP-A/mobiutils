@@ -1,4 +1,5 @@
 import { getSelectOptions } from "@/shared/form/rhf-select";
+import { ClassTier, PrismTag, PrismValueType } from "../model/prism.constants";
 import {
   greenHeliodorValue,
   HeliodorType,
@@ -50,4 +51,13 @@ export function getPrismGuide(index: number) {
   else if (index === 20) return "신발1";
   else if (index === 21) return "신발2";
   else if (index === 22) return "신발3";
+}
+
+export function getTagValueLabel(value: PrismValueType) {
+  switch (value) {
+    case "damage":
+      return "뎀증";
+    case "cooltime":
+      return "쿨감";
+  }
 }
