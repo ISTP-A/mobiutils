@@ -30,12 +30,12 @@ export const PRISM_TAGS = [
   "이동",
 ] as const;
 
-export type PrismTag = (typeof PRISM_TAGS)[number];
+export type PrismTagType = (typeof PRISM_TAGS)[number];
 
 export type PrismValueType = "damage" | "cooltime";
 
 export interface ValidTag {
-  tag: PrismTag;
+  tag: PrismTagType;
   type: PrismValueType;
   value: number;
 }
@@ -46,7 +46,7 @@ export interface ClassTier {
 }
 
 function geValidTag(
-  tag: PrismTag,
+  tag: PrismTagType,
   type: PrismValueType,
   value: number
 ): ValidTag {
@@ -257,7 +257,7 @@ export type ClassName = keyof typeof prismTagTierByClassMap;
 export const getClassTagValue = (
   cls: ClassName,
   type: PrismValueType,
-  tag: PrismTag
+  tag: PrismTagType
 ) => {
   const values = prismTagTierByClassMap[cls]
     .filter((x) => x.type === type && x.tag === tag)
@@ -274,7 +274,7 @@ export const getClassTagValue = (
 export const getClassTagMatrix = (cls: ClassName) => {
   const base = Object.fromEntries(
     PRISM_TAGS.map((t) => [t, 0] as const)
-  ) as Record<PrismTag, number>;
+  ) as Record<PrismTagType, number>;
 
   const damage = { ...base };
   const cooltime = { ...base };

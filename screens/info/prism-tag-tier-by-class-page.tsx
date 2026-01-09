@@ -10,6 +10,7 @@ export function PrismTagTierByClassPage() {
     return (
         <div className="w-full flex flex-col gap-4">
             <SelectTagForm onSubmit={setRanks} />
+            <hr />
             {ranks && <RankClassesByTagsBoard tags={ranks} />}
         </div>
     )

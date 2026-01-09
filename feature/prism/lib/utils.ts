@@ -1,5 +1,9 @@
 import { getSelectOptions } from "@/shared/form/rhf-select";
-import { ClassTier, PrismTag, PrismValueType } from "../model/prism.constants";
+import {
+  ClassTier,
+  PrismTagType,
+  PrismValueType,
+} from "../model/prism.constants";
 import {
   greenHeliodorValue,
   HeliodorType,
