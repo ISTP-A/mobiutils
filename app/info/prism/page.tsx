@@ -7,7 +7,7 @@ export default function PrismInfo() {
         <LayoutInner>
             <LayoutHeader>
                 <HeaderTitle>직업별 세공 정보</HeaderTitle>
-                <HeaderDescription></HeaderDescription>
+                <HeaderDescription>잘못된 정보가 있을 수 있으니 참고정도로 이용부탁드립니다</HeaderDescription>
             </LayoutHeader>
             <LayoutContent>
                 <PrismTagTierByClassPage />
